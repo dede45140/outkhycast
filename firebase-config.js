@@ -41,11 +41,11 @@ document.getElementById('signOutBtn').addEventListener('click', () => {
 // Listen to authentication state changes
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        document.getElementById('whenSignedIn').hidden = false;
-        document.getElementById('whenSignedOut').hidden = true;
-        document.getElementById('userDetails').textContent = `Hello, ${user.displayName}. Your UID is: ${user.uid}`;
+        window.location.href = "creationaccount.html";
+
     } else {
         document.getElementById('whenSignedIn').hidden = true;
         document.getElementById('whenSignedOut').hidden = false;
     }
 })
+
