@@ -41,7 +41,7 @@ document.getElementById('signOutBtn').addEventListener('click', () => {
 // Listen to authentication state changes
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        window.location.href = "creationaccount.html";
+        window.location.href = "./account/creationaccount.html";
 
     } else {
         document.getElementById('whenSignedIn').hidden = true;
