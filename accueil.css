@@ -13,6 +13,8 @@ body {
    width: 900px;
    background-color: #000;
    border-radius: 10px;
+   text-align: center;
+   align-items: center;
  
 }
 .container::before {
@@ -34,11 +36,15 @@ h2 {
    font-size: 24px;
    margin-bottom: 10px;
    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   text-align: center;
+   
 }
 
 h1 {
    font-size: 30px;
    margin-bottom: 10px;
+   text-align: center;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
@@ -46,6 +52,8 @@ righ-panel {
    flex: 1;
    background-color: #111;
    padding: 40px;
+   text-align: center;
+   align-items: center;
 }
 
 p {
@@ -56,11 +64,6 @@ p {
 
 }
 
-info {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 
 
 button {
@@ -85,19 +88,5 @@ button:hover {
 label {
    color: white;
    font-size: 10px;
-}
-
-input {
-  width: 90%;
-padding: 10px;
-margin: 5px;
-border-radius: 5px;
-margin-top: 10px;
-cursor: pointer;
-}
-
-autre option {
-  font-size: 15px;
-  text-align: center;
 }
 
