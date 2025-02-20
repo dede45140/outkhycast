@@ -18,27 +18,34 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
+// Sign in function
+document.getElementById('signInBtn').addEventListener('click', () => {
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            console.log(result.user);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+});
 
-const submit = document.getElementById('submit');
-submit.addEventListener("click",function(){
-  event.preventDefault()
+// Sign out function
+document.getElementById('signOutBtn').addEventListener('click', () => {
+    signOut(auth).then(() => {
+        console.log('User signed out');
+    }).catch((error) => {
+        console.error(error);
+    });
+});
 
- const email = document.getElementById('email').value;
- const password = document.getElementById('password').value;
- 
-  createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    alert("creer comptr fait")
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;0
-    alert("erorr reesssaye")
-    // ..
-  });
+// Listen to authentication state changes
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        document.getElementById('whenSignedIn').hidden = false;
+        document.getElementById('whenSignedOut').hidden = true;
+        document.getElementById('userDetails').textContent = `Hello, ${user.displayName}. Your UID is: ${user.uid}`;
+    } else {
+        document.getElementById('whenSignedIn').hidden = true;
+        document.getElementById('whenSignedOut').hidden = false;
+    }
 })
