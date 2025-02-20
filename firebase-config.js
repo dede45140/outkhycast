@@ -41,8 +41,9 @@ document.getElementById('signOutBtn').addEventListener('click', () => {
 // Listen to authentication state changes
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        window.location.href = "./account/creationaccount.html";
-
+ document.getElementById('whenSignedIn').hidden = false;
+        document.getElementById('whenSignedOut').hidden = true;
+        document.getElementById('userDetails').textContent = `Hello, ${user.displayName}. Your UID is: ${user.uid}`;
     } else {
         document.getElementById('whenSignedIn').hidden = true;
         document.getElementById('whenSignedOut').hidden = false;
