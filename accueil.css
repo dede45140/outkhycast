@@ -1,49 +1,103 @@
 body {
-   font-family: Arial, sans-serif;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-   background-color: #4b0082;
-   margin: 0;
+  background-color: #1a1a1a;
+  color: white;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
 }
 
 .container {
    display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   width: 50%;
-   max-width: 400px;
-   margin: 0 auto;
+   width: 900px;
+   background-color: #000;
+   border-radius: 10px;
+ 
 }
-
-.form-container, .dashboard-container {
-   background-color: white;
-   padding: 20px;
-   border-radius: 8px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
    width: 100%;
-   text-align: center;
+   height: 100%;
+   background-image: url('./img/login.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   filter: brightness(50%);
+   z-index: -1;;
 }
 
 h2 {
-   margin-bottom: 20px;
+   font-size: 24px;
+   margin-bottom: 10px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+h1 {
+   font-size: 30px;
+   margin-bottom: 10px;
+
+}
+
+righ-panel {
+   flex: 1;
+   background-color: #111;
+   padding: 40px;
+}
+
+p {
+   text-align: center;
+   margin: 15 px 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 20px
+
+}
+
+info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
 button {
-   width: 100%;
+   width: 50%;
+   border-radius: 50px;
+   font-weight: bold;
+   border: 1px solid white;
    padding: 15px;
-   margin: 15px 0;
-   background-color: #007bff;
-   border: none;
-   border-radius: 4px;
+   margin: 12px 45px;
+   background-color: #7bff;
    color: white;
    font-size: 16px;
+   letter-spacing: 1px;
    cursor: pointer;
+ 
 }
 
 button:hover {
-   background-color: #0056b3;
+   background-color: #b57edc;
 }
+
+label {
+   color: white;
+   font-size: 10px;
+}
+
+input {
+  width: 90%;
+padding: 10px;
+margin: 5px;
+border-radius: 5px;
+margin-top: 10px;
+cursor: pointer;
+}
+
+autre option {
+  font-size: 15px;
+  text-align: center;
+}
+
