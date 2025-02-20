@@ -9,24 +9,19 @@
 </head>
 <body>
  <div class="container">
- <h1>bonjour et bienvenue</h1>
  <div class="right-panel">
     <h2>Créer un compte</h2>
     <p>entrer vos informations pour acceder a une multitude de contenus !</p>
+    <section id="whenSignedOut" class="form-container">
+        <button id="signInBtn" class="btn">Sign in with Google</button>
+    </section>
+
+    <section id="whenSignedIn" class="dashboard-container" hidden>
+        <div id="userDetails"></div>
+        <button id="signOutBtn" class="btn">Sign Out</button>
+    </section>
+
  <form>
-    <div class="info">
- <label for="username">nom d'utilisateur</label>
- <input type="email" placeholder="email ou num" id="email" required>
- <input type="password" placeholder="mot de passe" id="password" required>
- <button type="submit" id="submit">Creer un compte</button>
-    </div>
- <p> or </p>
- <div class="autre option">
- <div class="google">Google</div>
  </div>
-</div>
-    </form>
-    </div>
-    </div>
 </body>
 </html>
